@@ -7,3 +7,11 @@ const myPromise = new Promise(function(resolve, reject) {
     reject("Something went wrong."); // rejected
   }
 });
+
+myPromise
+  .then(function(result) {
+    console.log(result); // "Data loaded!"
+  })
+  .catch(function(error) {
+    console.log(error); // "Something went wrong."
+  });
