@@ -1,6 +1,6 @@
 const age = 10;
 
-const checkAge = new Promise(function hi(resolve, reject) {
+const checkAge = new Promise((resolve, reject) => {
     if (age >= 18) {
         resolve("Access granted")
     }
