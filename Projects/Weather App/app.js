@@ -7,7 +7,7 @@ const errorMsg = document.querySelector("#error-msg")
 
 async function getWeather() {
     const city = cityInput.value;
-    const apiKey = "eac21a6ee788776bd3ebfed33fd32a97";
+    const apiKey = "c58ed2d4681486fe642db63a462ef6cd";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     try {
