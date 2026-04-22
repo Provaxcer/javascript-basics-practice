@@ -30,8 +30,6 @@ saveBtn.addEventListener("click", () => {
     const newNote = {
         title: noteTitle,
         content: noteContent
-    }   
-
-    notes.push(newNote);
+    };
     
-})
+});
