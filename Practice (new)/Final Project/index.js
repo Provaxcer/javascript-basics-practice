@@ -13,6 +13,7 @@ function loadNotes() {
     else {
         notes = [];
     }
+    renderNotes(notes)
     console.log(notes)
 }
 
@@ -31,5 +32,20 @@ saveBtn.addEventListener("click", () => {
         title: noteTitle,
         content: noteContent
     };
-    
+
+    let saving = JSON.parse(localStorage.getItem("notes")) || [];
+    saving.push(newNote);
+    localStorage.setItem("notes", JSON.stringify(saving));
+    renderNotes(saving)
 });
+
+function renderNotes(notes) {
+    notesCon.innerHTML = ""
+    notes.forEach(function (note) {
+        const newDiv = document.createElement("div");
+        newDiv.textContent = note.title
+        notesCon.append(newDiv)
+    });
+
+    
+}
