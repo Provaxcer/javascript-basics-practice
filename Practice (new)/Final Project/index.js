@@ -1,3 +1,4 @@
+```javascript
 const searchBox = document.querySelector("#search-input")
 const title = document.querySelector("#note-title")
 const Textarea = document.querySelector("#note-content")
@@ -49,3 +50,4 @@ function renderNotes(notes) {
 
     
 }
+```
