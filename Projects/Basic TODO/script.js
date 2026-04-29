@@ -17,5 +17,7 @@ submit.addEventListener("click", function(){
 })
 
 deletebtn.addEventListener("click", function(){
-    
+    const lastli = list.lastElementChild
+
+    lastli.remove()
 })
