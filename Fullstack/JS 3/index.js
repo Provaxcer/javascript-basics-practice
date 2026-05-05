@@ -2,9 +2,6 @@ const title = document.querySelector("#title")
 const PnLBox = document.querySelector("#PnLField")
 const Btn = document.querySelector("button")
 
-let arr = JSON.parse(localStorage.getItem('userProfile')) || [];
-
-// Full data 1 time data
 Btn.addEventListener('click', function gettingInput() {
     // taking value
     const titleName = title.value;
@@ -16,12 +13,20 @@ Btn.addEventListener('click', function gettingInput() {
     };
 
     localStorage.setItem('userProfile', JSON.stringify(userData));
-    const savedUser = JSON.parse(localStorage.getItem('userProfile'));
 
-    const heading = document.querySelector("h1")
+    const item = document.createElement("div");
+
+    const heading = document.createElement("h1");
     heading.textContent = userData.name;
-    const pnl = document.querySelector("h3")
-    pnl.textContent = `The Profit / Loss is: ${userData.pnl}`
 
-})
+    const pnl = document.createElement("h3");
+    pnl.textContent = `The Profit / Loss is: ${userData.pnl}`;
+
+    item.appendChild(heading);
+    item.appendChild(pnl);
+
+    list.appendChild(item);
+
+});
+
 
