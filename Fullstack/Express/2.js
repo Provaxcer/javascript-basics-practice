@@ -11,6 +11,7 @@ app.post('/journal', function (req, res) {
     console.log(trade)
     res.send('Trade logged: ' + JSON.stringify(trade))
 })
+
 app.put('/journal', function (req, res) {
     res.send("Trade updated")
 })
