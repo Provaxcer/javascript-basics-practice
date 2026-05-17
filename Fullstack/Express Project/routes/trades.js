@@ -1,3 +1,9 @@
+const express = require('express')
+const router = express.Router()
 
+const {getAllTrades, placeTrade} = require('../controller/tradeController')
 
-const {getAllTrades, getStockBySymbol} = require('../controller/stockController')
+router.get('/', getAllTrades)
+router.post('/', placeTrade)
+
+module.exports = router

@@ -1,11 +1,9 @@
-const express = require('express')
-const router = express.route()
+    const express = require('express')
+    const router = express.Router()
 
-const {getAllTrades, placeTrade} = require('../controller/tradeController')
+    const {getAllTrades, getStockBySymbol} = require('../controller/stockController')
 
+    router.get('/', getAllTrades)
+    router.get('/:symbol', getStockBySymbol)
 
-
-router.get('/', getAllTrades)
-router.get('/:symbol', getStockBySymbol)
-router.get('/data', getAllTrades)
-router.get('/place', placeTrade)
+    module.exports = router

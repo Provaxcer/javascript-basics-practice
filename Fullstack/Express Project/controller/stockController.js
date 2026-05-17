@@ -10,4 +10,4 @@ function getStockBySymbol (req, res){
     res.send(`This is the trade symbol ${symb}`)
 }
 
-module.export = {getAllTrades, getStockBySymbol}
+module.exports = {getAllTrades, getStockBySymbol}

@@ -9,4 +9,4 @@ function placeTrade (req, res){
     res.send("Trade Placed")
 }
 
-module.export = {getAllTrades, placeTrade}
+module.exports = {getAllTrades, placeTrade}

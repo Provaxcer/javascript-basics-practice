@@ -1,4 +1,0 @@
-stock,quantity,price
-RELIANCE,10,2500
-TCS,5,3400
-INFY,8,1500
