@@ -3,29 +3,20 @@ const prisma = new PrismaClient()
 
 const createStock = await prisma.stock.create({
     data: {
-
         symbol: "TCS",
         price: 3800
     }
 })
 
-const readStock = await prisma.stock.findMany({
-    where: {
-        symbol: "TCS"
-    }
+const readStock = await prisma.stock.findUnique({
+    where: { id: createStock.id }
 })
 
 const updateStock = await prisma.stock.update({
-    where: {
-        symbol: "TCS"
-    },
-    data: {
-        price: 3950
-    }
+    where: { id: newStock.id },
+    data: { price: 3950.00 }
 })
 
 const DeleteStock = await prisma.stock.delete({
-    where: {
-        symbol: "TCS"
-    }
+    where: { id: newStock.id }
 })
