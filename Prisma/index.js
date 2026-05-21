@@ -13,10 +13,10 @@ const readStock = await prisma.stock.findUnique({
 })
 
 const updateStock = await prisma.stock.update({
-    where: { id: newStock.id },
+    where: { id: createStock.id },
     data: { price: 3950.00 }
 })
 
 const DeleteStock = await prisma.stock.delete({
-    where: { id: newStock.id }
+    where: { id: createStock.id }
 })
