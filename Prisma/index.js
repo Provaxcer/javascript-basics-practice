@@ -5,7 +5,8 @@ import 'dotenv/config'
 
 const app = express()
 
-const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL })
+// use the direct postgres URL, not the prisma+postgres one
+const adapter = new PrismaPg({ connectionString: process.env.DIRECT_URL })
 const prisma = new PrismaClient({ adapter })
 
 app.use(express.json())
